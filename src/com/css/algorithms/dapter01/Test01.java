@@ -29,10 +29,10 @@ public class Test01 {
         for (int t = 0; t < T; t++) {
             double x = Math.random();
             double y = Math.random();
-            Point2D p = new Point2D(x,y);
-            if (box.contains(p)){
+            Point2D p = new Point2D(x, y);
+            if (box.contains(p)) {
                 c.increment();
-            }else{
+            } else {
                 p.draw();
             }
 
@@ -43,23 +43,23 @@ public class Test01 {
     }
 
     @Test
-    public void test(){
+    public void test() {
 
 //        System.out.println(true && false || true && true );
 //        System.out.println(2.0e-6 * 100000000.1 );
 //        System.out.println((0 + 15) / 2);
 
-        System.out.println((1 + 2.236) / 2 );
+        System.out.println((1 + 2.236) / 2);
 
 
-        System.out.println(1  + 2 + 3 + 4.0);
+        System.out.println(1 + 2 + 3 + 4.0);
 
         //System.out.println(1 _+  2 + "3");
 
     }
 
     @Test
-    public  void test02(){
+    public void test02() {
 
         System.out.println('b');
 
@@ -72,12 +72,28 @@ public class Test01 {
 
     }
 
+    /**
+     * 编写一段程序，如果double类型的变量x 和 y 都严格位于0和1 之间则打印true，否则打印false;
+     */
+    @Test
+    public void test03() {
 
+        double x = 0.9;
+        double y = 0.7;
+        if (match(x) && match(y)) {
+            System.out.println("true");
+        }else{
+            System.out.println("false");
+        }
 
+    }
 
-
-
-
+    public Boolean match(double x) {
+        if (0.0 < x && x  < 1.0) {
+            return true;
+        }
+        return false;
+    }
 
 
 }
