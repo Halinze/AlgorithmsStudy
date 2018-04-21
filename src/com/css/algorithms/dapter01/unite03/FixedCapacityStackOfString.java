@@ -14,8 +14,15 @@ public class FixedCapacityStackOfString {
 
     private int N ;//size
 
+    private int max ;
+
     public FixedCapacityStackOfString(int cap){
         a = new String[cap];
+        max = cap ;
+    }
+
+    public boolean isFull(){
+        return N==max;
     }
 
     public boolean isEmpty(){
@@ -38,7 +45,7 @@ public class FixedCapacityStackOfString {
     public static void main(String[] args) {
 
         FixedCapacityStackOfString s ;
-        s = new FixedCapacityStackOfString(100);
+        s = new FixedCapacityStackOfString(2);
 
         while(!StdIn.isEmpty()){
 
@@ -47,6 +54,7 @@ public class FixedCapacityStackOfString {
                 break;
             } else if(!item.equals("-")){
                 s.push(item);
+                System.out.println(s.isFull());
             }else if (!s.isEmpty()){
                 StdOut.print(s.pop() + " ");
             }

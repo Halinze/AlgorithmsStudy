@@ -6,10 +6,11 @@ import java.util.Iterator;
 
 /**
  * Created by 46597 on 2018/4/15.
- *
+ * 0.String类型简单栈
  * 1.加入泛型的栈
- * 2.自动调整数组大小的栈
+ * 2.自动调整数组大小的栈: 缺陷操作的耗 时和栈的大小成正比！
  * 3.可迭代的栈
+ * 4.最终版 (链表！)
  * 牛逼！
  */
 public class FixedCapacityStack<Item> implements  Iterable<Item> {
@@ -30,6 +31,8 @@ public class FixedCapacityStack<Item> implements  Iterable<Item> {
     public int Size(){
         return N ;
     }
+
+
 
     public void push(Item item){
         //将元素压入栈顶
