@@ -1,4 +1,4 @@
-package com.css.java8Study;
+package com.css.java8Study.model;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,0 +1,46 @@
+package com.css.headfirstshejimoshi.C;
+
+
+import java.util.Observable;
+
+/**
+ * java 内置的
+ * Created by 46597 on 2018/5/7.
+ */
+public class WeatherData extends Observable {
+
+
+    private float temperature ;
+    private float humidity ;
+    private float pressure ;
+
+
+    public void setMeasurements(float temperature , float humidity ,float pressure){
+        this.temperature = temperature;
+        this.humidity = humidity;
+        this.pressure = pressure;
+        measurementsChanged();
+
+    }
+
+    private void measurementsChanged() {
+        setChanged();
+        notifyObservers();
+    }
+
+    public float getTemperature(){
+        return temperature;
+    }
+
+    public float getHumidity(){
+        return humidity;
+    }
+
+    public float getPressure(){
+        return pressure;
+    }
+
+
+
+
+}

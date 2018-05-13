@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package com.css.java8Study;
+package com.css.java8Study.model;
 
 /**
  * @author richard
