@@ -1,12 +1,13 @@
 package com.css.headfirstshejimoshi.K;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Created by 46597 on 2018/5/19.
  * 对象村煎饼
  */
-public class PancakeHouseMenue {
+public class PancakeHouseMenue implements  BuildIterator {
 
     ArrayList menuItems;
 
@@ -38,4 +39,8 @@ public class PancakeHouseMenue {
         return menuItems;
     }
 
+    @Override
+    public Iterator createIterator() {
+        return menuItems.iterator();
+    }
 }

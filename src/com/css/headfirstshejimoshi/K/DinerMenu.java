@@ -1,9 +1,12 @@
 package com.css.headfirstshejimoshi.K;
 
+
+import java.util.Iterator;
+
 /**
  * Created by 46597 on 2018/5/19.
  */
-public class DinerMenu {
+public class DinerMenu implements  BuildIterator{
 
     static final int MAX_ITEMS = 6;
 
@@ -34,9 +37,11 @@ public class DinerMenu {
         }
     }
 
-    public MenuItem[] getMenuItems() {
-        return menuItems;
+
+
+
+    @Override
+    public Iterator createIterator() {
+        return new DinerMenuIterator(menuItems);
     }
-
-
 }
